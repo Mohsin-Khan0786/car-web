@@ -1,0 +1,57 @@
+header{
+    background-image: url('/bg.jpg');
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-attachment: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0 100%);
+}
+.headercontent{
+    padding-top: 8rem;
+}
+
+.headercontent h1{
+    
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    background: rgba(9, 1,1,0.553);
+
+}
+.headercontent h5{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    background: rgba(9, 1,1,0.553);
+
+}
+.headercontent button{
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    background:rgb(29, 107, 141);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 3rem;
+}
+@media screen and (max-width:768px){
+    header{
+        height: 90vh;
+        background-size: cover;
+        background-attachment: scroll;
+        display: flex;
+
+    }
+    .headercontent h1{
+       margin-bottom: 5rem;
+       margin-top: 0;
+        font-size: 1.3rem;
+    }
+    
+}
