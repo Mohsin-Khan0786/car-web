@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav>
         <h2>DriveLux</h2>
         <ul className={isOpen ? "menu active:" : "menu"}>
-<Link href='/'>
+<Link href='/home'>
 <li>Home</li>
 </Link>
 <Link href='/about'>
