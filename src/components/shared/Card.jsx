@@ -1,8 +1,9 @@
 import React from "react";
-import Products from "@/app/products/ProductList";
+import Products from "@/components/shared/List.js";
 import "@/components/styles/card.css";
 
 const Card = () => {
+
   return (
     <>
       <div className="product-list">

@@ -9,7 +9,7 @@ const Home = () => {
         <div className="container">
             <div className="headercontent">
                 <h1>Discover the Ultimate Driving Experience with DriveLux</h1>
-                <Link href='/products/Card'>
+                <Link href='/products'>
                 <button>
                 Begin Adventure
                 </button>
