@@ -1,12 +1,25 @@
+import React from 'react'
+import '@/components/styles/home.css'
+import Link from 'next/link'
 
-
-export default function Home() {
+const Home = () => {
   return (
     <>
-    <h1>Next js</h1>
-    <page/>
-    
-
+    <header>
+        <div className="container">
+            <div className="headercontent">
+                <h1>Discover the Ultimate Driving Experience with DriveLux</h1>
+                <Link href='/products/Card'>
+                <button>
+                Begin Adventure
+                </button>
+                </Link>
+            </div>
+        </div>
+    </header>
+  
     </>
-     );
+  )
 }
+
+export default Home

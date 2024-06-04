@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import "@/app/components/styles/navbar.css"
+import "@/components/styles/navbar.css"
 import { IoIosMenu } from "react-icons/io";
 import Link from 'next/link';
 
