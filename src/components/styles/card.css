@@ -11,9 +11,11 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 16px;
-    width: 250px;
+    width: 300px;
+    height: 500px;
+    
     text-align: center;
-    transition: box-shadow 0.3s ease;
+  
   }
   
   .product-card:hover {
@@ -21,8 +23,8 @@
   }
   
   .product-image {
-    max-width: 100%;
-    height: auto;
+    max-width: 90%;
+    height: 40%;
     border-radius: 8px;
   }
   
@@ -42,4 +44,17 @@
     color: #333;
     margin-bottom: 16px;
   }
+  .product-list button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: rgb(40, 141, 185);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+
   

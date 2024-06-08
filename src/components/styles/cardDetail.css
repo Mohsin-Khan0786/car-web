@@ -1,0 +1,58 @@
+*{
+    padding: 0px;
+    margin: 0px;
+
+}
+.contain{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    width: 70%;
+    margin-left: 30px;
+    height: 70%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+
+}
+.detail{
+    
+    padding: 20px;
+    box-sizing: border-box;
+}
+.detail img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 20px;
+
+}
+.detail h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+}
+.detail h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+}
+.detail button{
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    background:rgb(29, 107, 141);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 3rem;
+}
+
+.contain-img img{
+    width: 80%;
+    height: 50%;
+   margin: 1rem;
+    border-radius: 20px;
+      padding: 20px;
+}

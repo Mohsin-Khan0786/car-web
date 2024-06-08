@@ -3,7 +3,7 @@ import Navbar from "@/components/shared/Navbar";
 
 export const metadata = {
   title: "Car App",
-  description: "Car Web App devloped by Mohsin Kahn",
+  description: "Car Web App devloped by Mohsin Khan",
 };
 
 export default function RootLayout({ children }) {

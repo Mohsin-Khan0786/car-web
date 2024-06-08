@@ -39,6 +39,14 @@
   .menu-icon {
     display: none;
   }
+  .cart-icon{
+    
+     cursor: pointer;
+     color: rgb(40, 141, 185);
+     font-size: 30px;
+     font-weight: bolder;
+ 
+  }
   
   @media screen and (max-width: 768px) {
   
