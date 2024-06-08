@@ -4,7 +4,7 @@ import React from "react";
 import "@/components/styles/card.css";
 import Link from "next/link";
 
-const Card = ({ product, addToCart }) => {
+const CartCard = ({ product, removeFromCart }) => {
   return (
     <div className="product-card">
       <Link href={`/products/${product.id}`}>
@@ -13,9 +13,9 @@ const Card = ({ product, addToCart }) => {
         <p className="product-description">{product.description}</p>
         <p className="product-price">{product.price}</p>
       </Link>
-      <button onClick={() => addToCart(product)}>Add to Cart</button>
+      <button onClick={() => removeFromCart(product.id)}>remove</button>
     </div>
   );
 };
 
-export default Card;
+export default CartCard;
