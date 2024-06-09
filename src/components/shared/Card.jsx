@@ -13,7 +13,9 @@ const Card = ({ product, addToCart }) => {
         <p className="product-description">{product.description}</p>
         <p className="product-price">{product.price}</p>
       </Link>
-      <button onClick={() => addToCart(product)}>Add to Cart</button>
+      <button onClick={() => addToCart({ product, qty: 1 })}>
+        Add to Cart
+      </button>
     </div>
   );
 };
