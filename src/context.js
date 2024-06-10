@@ -1,29 +1,37 @@
 "use client";
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
 
 const CartContext = createContext(null);
 
 export const CartProvider = ({ children }) => {
+  const [cart, setCart] = useState(() => {
+    // Retrieve initial cart from localStorage if available
+    const storedCart = localStorage.getItem("cart");
+    return storedCart ? JSON.parse(storedCart) : [];
+  });
 
-  const [cart, setCart] = useState([]);
+  const name = "eioldabc";
 
-const name = "eioldabc"
+  useEffect(() => {
+    // Save cart to localStorage whenever it changes
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   const addToCart = (product) => {
     if (product) {
-      setCart([...cart, product]);
-      toast.success("Addedd to cart successfully");
+      setCart((prevCart) => [...prevCart, product]);
+      toast.success("Added to cart successfully");
     }
   };
 
   const removeFromCart = (id) => {
-    setCart(cart.filter((item) => item.id !== id));
-    toast.success("remove from cart successfully");
+    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
+    toast.success("Removed from cart successfully");
   };
 
-  console.log(cart)
+  console.log(cart);
 
   return (
     <CartContext.Provider
@@ -40,7 +48,6 @@ const name = "eioldabc"
 };
 
 // Custom hook
-
 export const useStore = () => {
   return useContext(CartContext);
 };

@@ -1,22 +1,17 @@
 'use client'
-import React, { useState ,useEffect} from 'react'
+import React, { useState } from 'react'
 import Products from '@/components/shared/List'
 import '@/components/styles/cardDetail.css'
 const page = ({params:{id}}) => {
   const [myproducts,setmyproducts]=useState([])
-  useEffect(()=>{
-    const existProd=JSON.parse(localStorage.getItem('cart'))||[]
-    setmyproducts(existProd)
-    
-
-  })
+  
 
     const product=Products.find((item)=>item.id==id)
 const ADD=(item)=>{
   const newproduct={
-    ...product,
+    ...item,
     quantity:1
-  }
+  }  
   setmyproducts((preproduct)=>[...preproduct,newproduct])
   localStorage.setItem('cart',JSON.stringify([...myproducts,newproduct]))
 
