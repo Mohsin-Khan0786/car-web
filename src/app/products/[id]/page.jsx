@@ -4,8 +4,6 @@ import Products from '@/components/shared/List'
 import '@/components/styles/cardDetail.css'
 const page = ({params:{id}}) => {
   const [myproducts,setmyproducts]=useState([])
-  
-
     const product=Products.find((item)=>item.id==id)
 const ADD=(item)=>{
   const newproduct={
@@ -34,9 +32,6 @@ const ADD=(item)=>{
     <img src={product.interior1} alt={product.name}/>
     <img src={product.interior2} alt={product.name} />
     </div>
-    
-   
-
     </div>
     </>
   )

@@ -12,31 +12,33 @@ export const CartProvider = ({ children }) => {
     return storedCart ? JSON.parse(storedCart) : [];
   });
 
-  const name = "eioldabc";
-
   useEffect(() => {
-    // Save cart to localStorage whenever it changes
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
   const addToCart = (product) => {
     if (product) {
-      setCart((prevCart) => [...prevCart, product]);
-      toast.success("Added to cart successfully");
+      const checkProduct = cart.findIndex(
+        (item) => item.product.id === product.product.id
+      );
+      if (checkProduct !== -1) {
+        const cartCopy = [...cart];
+        cartCopy[checkProduct].qty += 1;
+        setCart(cartCopy);
+      } else {
+        setCart([...cart, product]);
+        toast.success("Added to cart successfully");
+      }
     }
   };
 
-  const removeFromCart = (id) => {
-    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
-    toast.success("Removed from cart successfully");
+  const removeFromCart = (productId) => {
+    setCart(cart.filter((item) => item.product.id !== productId));
   };
-
-  console.log(cart);
 
   return (
     <CartContext.Provider
       value={{
-        name,
         cart,
         addToCart,
         removeFromCart,
