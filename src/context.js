@@ -6,7 +6,6 @@ import { toast } from "react-hot-toast";
 const CartContext = createContext(null);
 
 export const CartProvider = ({ children }) => {
-<<<<<<< HEAD
   const [cart, setCart] = useState(() => {
     // Retrieve initial cart from localStorage if available
     const storedCart = localStorage.getItem("cart");
@@ -24,23 +23,6 @@ export const CartProvider = ({ children }) => {
     if (product) {
       setCart((prevCart) => [...prevCart, product]);
       toast.success("Added to cart successfully");
-=======
-  const [cart, setCart] = useState([]);
-
-  const addToCart = (product) => {
-    if (product) {
-      const checkProduct = cart.findIndex(
-        (item) => item.product.id == product.product.id
-      );
-      if (checkProduct !== -1) {
-        const cartCopy = [...cart];
-        cartCopy[checkProduct].qty += 1;
-        setCart(cartCopy);
-      } else {
-        setCart([...cart, product]);
-        toast.success("Addedd to cart successfully");
-      }
->>>>>>> 145284ee5c629901067f0aa0638869e70753cb6c
     }
   };
 
@@ -54,6 +36,7 @@ export const CartProvider = ({ children }) => {
   return (
     <CartContext.Provider
       value={{
+        name,
         cart,
         addToCart,
         removeFromCart,
